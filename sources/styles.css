@@ -15,6 +15,7 @@ website:   nhhbranding.com
     border: 0; 
     margin-block-end: 0;
     margin-block-start:0;
+    box-sizing: border-box;
 }
 
 body 
@@ -26,14 +27,14 @@ body
     font-family: 'Fira Sans', sans-serif;
 } 
 
-h1,h2,h3,h4,h5,h6{
+h1, h2, h3, h4, h5, h6{
     font-family: 'Anek Latin', sans-serif;
     font-weight:700;
 }
 
 h1 
     { 
-    font-size: 2.2em;
+    font-size: 3.9em;
 } 
      
 h2 
@@ -43,7 +44,7 @@ h2
      
 h3 
     { 
-    font-size: 1.8em; 
+    font-size: 1.1em; 
 } 
      
 h4 
@@ -58,10 +59,36 @@ h5
      
 p 
     { 
-    font-size: 1.2em;     
+    font-size: 1em;     
+    color: #45474e;
+    line-height: 1.75em;
 }
 
 img{width: 100%;}
+
+.main-button{
+    border: none;
+    text-decoration: none;
+    padding: 1.2em 2em;
+    background-color:#00cec6;
+    color: white;
+    font-weight: bold;
+    margin: 1em em;
+}
+
+.header-border{
+    width: 50px;
+    height: 3px;
+    background-color: #00cec6;
+    cursor: pointer;
+    margin: 1em 0em;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 /**Navigation Bar**/
 
@@ -90,9 +117,10 @@ nav ul{
     padding: 1em 1em;
     clip-path: polygon( 3% 0%, 100% 0%, 100% 100%, 0% 100%);
     width: 100%;
+    justify-content: space-evenly;
     height: 50%;
     align-self: end;
-    text-align: left;
+    display: flex;
 }
 
 nav ul li{
@@ -102,7 +130,165 @@ nav ul li{
 }
 
 .margin-container{
-    padding: 0em 4em;
+    width: 100%;
+    justify-content: space-between;
     display: inline-flex;
+}
 
+/**Home page hero image style**/
+
+.home-hero{
+    background-image:url("images/EngineeringHero.jpg");
+    background-size: cover;
+    height:900px;
+    background-color: #272a3c;
+}
+
+.home-hero-textBlock{
+    position: relative;
+    left: 0;
+    top: 40%;
+    padding-left: 4em;
+}
+
+.home-hero-textBlock h1{
+    width: 58%;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.8em 0em;
+}
+
+.home-hero-textBlock h3{
+    text-transform: uppercase;
+    position: absolute;
+    padding: 0.25em 2em;
+    text-align: center;
+    background-color: white;
+    clip-path: polygon( 3% 0%, 100% 0%, 100% 100%, 0% 100%);
+    color: #272a3c;
+}
+
+/** Home page services section**/
+
+.home-services{
+    color: #272a3c;
+    padding: 2em 4em;
+}
+
+.home-services h2{
+    font-weight: 800;
+    margin-bottom: 0.25em;
+}
+
+
+
+/**Services flexbox section**/
+.hs-flexContainer{
+    margin: 1em 2em;
+    display: flex;
+    flex-basis: 33%;
+    flex-direction: row;
+}
+
+.hs-flexBox{
+    margin: 0.75em;
+    border: 1px solid #272a3c;
+}
+
+.hs-flexBox figure{
+    height: 300px;
+    padding-bottom: 1em;
+}
+
+.hs-flexBox figure img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.hs-flexText p{
+    margin:1em 0em;
+}
+
+.hs-flexText{
+    padding: 1em 1em;
+}
+
+
+/**About Company Section with Mission Statement**/
+
+.home-missionBlock{
+    display: flex;
+    flex-basis: 50%;
+    min-height: 720px;
+    margin: 2em 0em;
+    flex-direction: row;
+}
+
+
+.missonBlock-image{
+    background-image: url("images\Construction small.jpg");
+    background-size: cover;
+    background-color: #0c0c10;
+    width: 40%;
+}
+
+.missionBlock-flexText {
+    width: 60%;
+}
+
+.mission-about{
+    padding: 5em 2em;
+    height: 70%;
+    background-color: #272a3c;
+}
+
+.grey-header{
+    color: #45474e!important;
+}
+
+.mission-about h2{
+    color:white;
+}
+
+.mission-about p{
+    color:white;
+    line-height:2em;
+}
+
+.mission-statement-block {
+    background-color: #00cec6;
+    padding: 3em;
+    width: 90%;
+    height: 200px;
+    max-width: 639px;
+    margin: -8em 0em 0em 2em;
+    position: relative;
+}
+
+.mission-statement-block:before {
+    content: "";
+    position: absolute;
+    top: 200px;
+    left: 0;
+    height: 40px;
+    width: 76px;
+    border-top-left-radius: 60%;
+    background: #ffffff;
+    box-shadow: 0 -20px 0 0 #00cec6;
+
+}
+
+
+.mission-statement-block p{
+    color: white;
+
+}
+
+.mission-statement{
+    color: #272a3c;
+    height: 20%;
+    padding-left: 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
