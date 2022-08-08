@@ -67,6 +67,8 @@ p
 
 img{width: 100%;}
 
+/**sets button styles throughout**/
+
 .main-button{
     border: none;
     cursor: pointer;
@@ -181,7 +183,7 @@ nav ul li{
         display:block;
     }
 /**Hero Image Section Mobile**/
-    .home-hero{
+    .home-hero, .home-hero figure, .home-hero figure img{
       height: 700px!important;
 
 }
@@ -246,23 +248,32 @@ nav ul li{
 
 
 /**Home page hero image style**/
-
 .home-hero{
-    background-image:url("images/EngineeringHero.jpg");
-    background-size: cover;
     height:900px;
-    background-color: #272a3c;
+    background-color: #272a3c; 
+}
+
+.home-hero figure{
+    height:900px;
+    width:100%;
+    position:absolute;
+}
+
+.home-hero figure img{
+    height:900px;
+    object-fit:cover;
+    opacity: 0.4;
 }
 
 .home-hero-textBlock{
     position: relative;
-    left: 0;
     top: 30%;
-    padding-left: 4em;
+    max-width: 1785px;
+    padding: 2em;
+    margin: 0em auto;
 }
 
 .home-hero-textBlock h1{
-    width: 58%;
     text-transform: uppercase;
     color: white;
     padding: 0.8em 0em;
@@ -282,7 +293,9 @@ nav ul li{
 
 .home-services{
     color: #272a3c;
-    margin: 10em 4em;
+    max-width: 1785px;
+    padding: 2em;
+    margin: 10em auto;
 }
 
 .home-services h2{
@@ -294,14 +307,13 @@ nav ul li{
 
 /**Services flexbox section**/
 .hs-flexContainer{
-    margin: 0em 2em;
     display: flex;
     flex-basis: 33%;
     flex-direction: row;
 }
 
 .hs-flexBox{
-    margin: 0.75em;
+    margin: 1em;
     border: 1px solid #272a3c;
 }
 
@@ -408,8 +420,10 @@ nav ul li{
 /**Company Recent News Section**/
 
 .home-news{
-    text-align: center;
-    margin: 10em 2em;
+    color: #272a3c;
+    max-width: 1785px;
+    padding: 2em;
+    margin: 10em auto;
 }
 
 .center-border{
@@ -420,8 +434,9 @@ nav ul li{
 /**Company Testimonials**/
 
 .home-testimonials{
-    margin:10em 0em;
-    text-align: center;
+    max-width: 1785px;
+    padding: 2em;
+    margin: 10em auto;
   }
 
 .ht-flexContainer{
@@ -440,9 +455,8 @@ nav ul li{
   border: 1px solid #d1cbcb;
 }
 
-/**Home Contact Bar**/
+/**Home Bottom Contact Us Bar**/
 .home-contactBar{
-    margin: 10em 0;
     background-color: #00cec6;
     display: flex;
     justify-content: center;
@@ -471,4 +485,59 @@ nav ul li{
     max-width: 150px;
     max-height: 60px;
     margin-left: auto;
+}
+
+/**Footer styling**/
+footer{
+    background-color: #272a3c;
+    
+    color: white;
+}
+
+footer p{
+    color: rgb(174, 174, 174);
+}
+
+footer h3{
+    color: white ;
+}
+
+.footer-flexContainer{
+    display: flex;
+    max-width: 1785px;
+    padding: 10em 2em;
+    margin: 0em auto;
+}
+
+footer figure{
+    opacity: 0.2;
+    display: flex;
+    padding-right:2em;
+}
+
+footer figure img{
+    width: 70px;
+}
+
+.footer-contact{
+    width: 50%;
+}
+
+.footer-newsletter{
+    width: 50%;
+}
+
+#email{
+
+    width: 50%;
+    min-width: 350px;
+    padding: 0.5em;
+    border-radius: 10px;
+    height: 30px;
+    margin: 2em 1em;
+}
+
+#email-button{
+    width:50%;
+    max-width: 180px;
 }
