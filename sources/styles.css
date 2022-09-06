@@ -354,6 +354,16 @@ nav ul li{
     width: 40%;
 }
 
+.missonBlock-image figure{
+    height: 720px;
+}
+
+.missonBlock-image img{
+    width: 100%;
+    object-fit: cover;
+    height: 720px;
+}
+
 .missionBlock-flexText {
     width: 60%;
 }
