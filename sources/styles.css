@@ -1,6 +1,6 @@
 /*-----------------------------------
 version:   1.0 
-date:      07/08/22 
+date:      07/08/21
 author:    nhh branding (Neil Harm)
 email:     nhharm@gmail.com 
 website:   nhhbranding.com 
@@ -153,7 +153,7 @@ nav ul li{
     display: none;
     text-align: right;
     height: 23px;
-    width: 15%;
+    width: auto;
 }
 
 @media only screen and (max-width: 1250px) {
@@ -184,12 +184,12 @@ nav ul li{
     }
 /**Hero Image Section Mobile**/
     .home-hero, .home-hero figure, .home-hero figure img{
-      height: 700px!important;
+      height: 600px!important;
 
 }
 
     .home-hero-textBlock{
-      top: 30%!important;
+      top: 10%!important;
 }
 
     .home-hero-textBlock h1{
@@ -216,12 +216,28 @@ nav ul li{
     .missionBlock-flexText{
         width: 100%!important;
     }
+    .home-missionBlock{
+        flex-direction: column!important;
+    }
+    .mission-statement-block{
+        margin:0!important;
+        width: 100%!important;
+        padding: 1em!important;
+        height: auto!important;
+    }
+    .mission-statement-block:before{
+        display: none;
+    }
+    .mission-statement{
+        padding: 1em!important;
+    background-color: #f1f1f1;
+    }
     .ht-flexContainer, .hc-flexContainer{
         flex-direction: column!important;
     }
     
-    .ht-flexBox{
-        margin: 2em!important;
+    .ht-flexBox, .hs-flexBox{ 
+        margin:2em 0em!important;
     }
     .right-anchor{
         margin-left: 0 !important;
@@ -233,17 +249,10 @@ nav ul li{
     .home-hero-textBlock h1{
         padding-left: 0!important;    
     }
-    .home-missionBlock{
-        flex-direction: column!important;
+    .home-services, .home-news{
+        margin: 2em 0em!important;
     }
-    .mission-statement-block{
-        margin:0!important;
-        width: 100%!important;
-        margin-bottom: 2em!important;
-    }
-    .mission-statement-block:before{
-        display: none;
-    }
+ 
 }
 
 
@@ -251,6 +260,7 @@ nav ul li{
 .home-hero{
     height:900px;
     background-color: #272a3c; 
+    margin-bottom: 2em;
 }
 
 .home-hero figure{
@@ -291,11 +301,15 @@ nav ul li{
 
 /** Home page services section**/
 
+.content-margins{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em 4em;
+}
+
 .home-services{
     color: #272a3c;
-    max-width: 1785px;
-    padding: 2em;
-    margin: 10em auto;
+
 }
 
 .home-services h2{
@@ -341,14 +355,13 @@ nav ul li{
 .home-missionBlock{
     display: flex;
     flex-basis: 50%;
-    min-height: 720px;
-    margin: 10em 0em;
+    margin-top:2em;
+    margin-bottom: 2em;
     flex-direction: row;
 }
 
 
 .missonBlock-image{
-    background-image: url("images\Construction small.jpg");
     background-size: cover;
     background-color: #0c0c10;
     width: 40%;
@@ -431,9 +444,7 @@ nav ul li{
 
 .home-news{
     color: #272a3c;
-    max-width: 1785px;
-    padding: 2em;
-    margin: 10em auto;
+
 }
 
 .center-border{
@@ -444,9 +455,7 @@ nav ul li{
 /**Company Testimonials**/
 
 .home-testimonials{
-    max-width: 1785px;
-    padding: 2em;
-    margin: 10em auto;
+ 
   }
 
 .ht-flexContainer{
@@ -514,20 +523,8 @@ footer h3{
 
 .footer-flexContainer{
     display: flex;
-    max-width: 1785px;
-    padding: 10em 2em;
-    margin: 0em auto;
 }
 
-footer figure{
-    opacity: 0.2;
-    display: flex;
-    padding-right:2em;
-}
-
-footer figure img{
-    width: 70px;
-}
 
 .footer-contact{
     width: 50%;
@@ -550,4 +547,26 @@ footer figure img{
 #email-button{
     width:50%;
     max-width: 180px;
+}
+
+
+@media only screen and (max-width:700px) {
+    /**Mission Statement Mobile Style**/
+    .footer-flexContainer{
+        flex-direction: column-reverse!important;
+        padding-top: 5em!important;
+    }
+    .footer-contact{
+        width: 100%!important;
+        margin-top: 4em;
+    }
+    
+    .footer-newsletter{
+        width: 100%!important;
+    }
+
+    .content-margins{
+        max-width:100%!important;
+    padding: 1em 1em!important;
+    }
 }
